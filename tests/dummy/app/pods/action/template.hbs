@@ -9,7 +9,12 @@
   onClick=(action (mut number) (add number 1))
 }}
 
+<p>An string 'hello' and cp 'displayText' is being curried into action.  </p>
+
+<p>Click the secondary button to see the result.</p>
+
 <div style="margin-top: 40px">Received attrs from action</div>
 {{#each actionAttrs as |attr index|}}
   <div>{{index}}: {{attr}}</div>
 {{/each}}
+
