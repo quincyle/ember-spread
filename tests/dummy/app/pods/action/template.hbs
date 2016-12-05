@@ -1,0 +1,15 @@
+{{component config.component
+  options=config.options
+}}
+
+{{frost-button
+  priority='primary'
+  text='add'
+  size='medium'
+  onClick=(action (mut number) (add number 1))
+}}
+
+<div style="margin-top: 40px">Received attrs from action</div>
+{{#each actionAttrs as |attr index|}}
+  <div>{{index}}: {{attr}}</div>
+{{/each}}

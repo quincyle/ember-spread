@@ -22,11 +22,11 @@ export default Ember.Mixin.create({
     if (isPresent(options)) {
       assert(`${spreadProperty} requires a hash parameter`, typeOf(options) === 'object')
       keys(Ember.get(this, spreadProperty)).forEach((key) => {
-        const value = Ember.get(this, spreadProperty)[key]
-        if (typeOf(value) === 'function') {
-          set(this, key, value)
-          return
-        }
+        //const value = Ember.get(this, spreadProperty)[key]
+        //if (typeOf(value) === 'function') {
+        //  set(this, key, value)
+        //  return
+        //}
         defineProperty(this, key, readOnly(`${spreadProperty}.${key}`))
       })
 
